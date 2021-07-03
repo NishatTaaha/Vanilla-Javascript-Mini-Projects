@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-bottom: 70px;
+            background-color: lightskyblue;
+        }
+
+        .container {
+            position: relative;
+            perspective: 100px;
+        }
+
+        .container .slide-container{
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 5px 10px #3337;
+            width: 450px;
+            padding: 20px;
+            margin: 10px;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .container .slide-container .slide .icon{
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 80px;
+            color: lightskyblue;
+        }
+
+        .container .slide-container .slide .user{
+            display: flex;
+            align-items: center;
+        }
+
+        .container .slide-container .slide img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* margin-right: 10px; */
+            margin: .9rem;
+        }
+
+        .container .slide-container .slide .user .user-info .stars i{
+            color: goldenrod;
+        }
+
+        .container .slide-container .slide p{
+            font-size: .9rem;
+            color: gray;
+        }
+
+        .container .slide-container{
+            display: none;
+        }
+
+        .container .slide-container.active{
+            display: block;
+        }
+
+        .container #next,
+        .container #prev{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 5px;
+        }
+
+        .container #next{
+            right: -70px;
+        }
+
+        .container #prev{
+            left: -70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slide-container active">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/test3.jpeg" alt="">
+                    <div class="user-info">
+                        <h3>Jhon Doe</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto saepe
+                    ratione quas soluta quidem Consequuntur architecto saeperatione quas soluta quidem</p>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/test4.jpeg" alt="">
+                    <div class="user-info">
+                        <h3>Daniel Watson</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Saepe ratione quas soluta quidem suscipit deleniti excepturi earum quod rerum exercitationem officia rem,
+                    esse itaque mollitia libero? Molestias, itaque!</p>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/test5.jpeg" alt="">
+                    <div class="user-info">
+                        <h3>Robert Daniel</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text"> architecto saepe quidem suscipit deleniti excepturi earum quod rerum exercitationem officia rem,
+                    esse itaque mollitia libero? Molestias, itaque!</p>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/test6.jpeg" alt="">
+                    <div class="user-info">
+                        <h3>Cristen Jenny</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Consectetur adipisicing elit. Consequuntur architecto saepe
+                    ratione quas soluta quidem suscipit deleniti excepturi earum quod rerum exercitationem officia rem,</p>
+            </div>
+        </div>
+
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
