@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            /* text-align: center; */
+            /* top: 50%; */
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        button{
+            top: 50%;
+            height: 5rem;
+            width: 10rem;
+            border: 3px solid black;
+            color: black;
+            font-size: 2rem;
+            background-color: inherit;
+            border-radius: 1rem;
+            transition: .3s;
+        }
+
+        button:hover{
+            border: 3px solid black;
+            color: white;
+            background-color: black;
+        }
+
+        p{
+            font-size: 3rem;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-center">
+       <button id="change" class="change-btn">change</button>
+    </div>
+
+    <p id="color" class="color-text">
+        rgb(255,255,255)
+    </p>
+    <script src="script.js"></script>
+</body>
+</html>
