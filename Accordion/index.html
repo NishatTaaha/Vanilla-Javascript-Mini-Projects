@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #bedfe8;
+        }
+
+        .accordion{
+            max-width: 800px;
+        }
+
+        .accordion .contentBx{
+            position: relative;
+            margin: 10px 20px;
+        }
+
+        .accordion .contentBx .label{
+            position: relative;
+            padding: 10px;
+            background: #2694af;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .accordion .contentBx .label:before{
+            content: '+';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+
+        .accordion .contentBx.active .label:before{
+            content: '-';
+        }
+
+        .accordion .contentBx .content{
+            position: relative;
+            background: #fff;
+            height: 0;
+            /* display: none; */
+            overflow: hidden;
+            transition: .5s;
+            overflow-y: auto;
+            /* padding: 1.2rem; */
+        }
+
+        .accordion .contentBx.active .content{
+            height: 150px;
+            /* padding: 10px; */
+        }
+
+        .accordion .contentBx .content p{
+            margin: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="accordion">
+        <div class="contentBx">
+            <div class="label">List One</div>
+            <div class="content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero modi veniam obcaecati saepe assumenda eos? Aut adipisci repellat, maiores inventore eveniet quos voluptas explicabo officia dignissimos eligendi nulla ab voluptate.</p>
+            </div>
+        </div>
+
+        <div class="contentBx">
+            <div class="label">List Two</div>
+            <div class="content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero modi veniam obcaecati saepe assumenda eos? Aut adipisci repellat, maiores inventore eveniet quos voluptas explicabo officia dignissimos eligendi nulla ab voluptate.</p>
+            </div>
+        </div>
+
+        <div class="contentBx">
+            <div class="label">List Three</div>
+            <div class="content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero modi veniam obcaecati saepe assumenda eos? Aut adipisci repellat, maiores inventore eveniet quos voluptas explicabo officia dignissimos eligendi nulla ab voluptate.</p>
+            </div>
+        </div>
+
+        <div class="contentBx">
+            <div class="label">List Four</div>
+            <div class="content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero modi veniam obcaecati saepe assumenda eos? Aut adipisci repellat, maiores inventore eveniet quos voluptas explicabo officia dignissimos eligendi nulla ab voluptate.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
