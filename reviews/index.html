@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +16,6 @@
             box-sizing: border-box;
             text-transform: capitalize;
         }
-
         body {
             display: flex;
             align-items: center;
@@ -26,12 +24,10 @@
             padding-bottom: 70px;
             background-color: lightskyblue;
         }
-
         .container {
             position: relative;
             perspective: 100px;
         }
-
         .container .slide-container{
             border-radius: 5px;
             background: #fff;
@@ -42,7 +38,6 @@
             position: relative;
             transform-style: preserve-3d;
         }
-
         .container .slide-container .slide .icon{
             position: absolute;
             top: 10px;
@@ -50,38 +45,30 @@
             font-size: 80px;
             color: lightskyblue;
         }
-
         .container .slide-container .slide .user{
             display: flex;
             align-items: center;
         }
-
         .container .slide-container .slide img{
             height: 100px;
             width: 100px;
             border-radius: 50%;
             object-fit: cover;
-            /* margin-right: 10px; */
             margin: .9rem;
         }
-
         .container .slide-container .slide .user .user-info .stars i{
             color: goldenrod;
         }
-
         .container .slide-container .slide p{
             font-size: .9rem;
             color: gray;
         }
-
         .container .slide-container{
             display: none;
         }
-
         .container .slide-container.active{
             display: block;
         }
-
         .container #next,
         .container #prev{
             position: absolute;
@@ -97,17 +84,14 @@
             border-radius: 50%;
             box-shadow: 0 5px;
         }
-
         .container #next{
             right: -70px;
         }
-
         .container #prev{
             left: -70px;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="slide-container active">
@@ -130,7 +114,6 @@
                     ratione quas soluta quidem Consequuntur architecto saeperatione quas soluta quidem</p>
             </div>
         </div>
-
         <div class="slide-container">
             <div class="slide">
                 <i class="fas fa-quote-right icon"></i>
@@ -151,7 +134,6 @@
                     esse itaque mollitia libero? Molestias, itaque!</p>
             </div>
         </div>
-
         <div class="slide-container">
             <div class="slide">
                 <i class="fas fa-quote-right icon"></i>
@@ -172,7 +154,6 @@
                     esse itaque mollitia libero? Molestias, itaque!</p>
             </div>
         </div>
-
         <div class="slide-container">
             <div class="slide">
                 <i class="fas fa-quote-right icon"></i>
@@ -193,11 +174,9 @@
                     ratione quas soluta quidem suscipit deleniti excepturi earum quod rerum exercitationem officia rem,</p>
             </div>
         </div>
-
         <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
         <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>
