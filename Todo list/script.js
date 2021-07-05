@@ -34,6 +34,7 @@ function addTodo()
         this.parentElement.classList.toggle('completed');
     }
 
+    
     const trashBtn = document.createElement('button');
     trashBtn.classList.add('trash-btn');
     trashBtn.innerHTML = '<i class="fas fa-trash"></i>';
@@ -43,6 +44,18 @@ function addTodo()
     function deleteCheck()
     {
         this.parentElement.remove();
+    }
+    
+    
+    const editBtn = document.createElement('button');
+    editBtn.classList.add('edit-btn');
+    editBtn.innerHTML = '<i class="fas fa-pen"></i>';
+    div.appendChild(editBtn);
+    
+    editBtn.addEventListener('click', editCheck);
+    function editCheck(){
+        input.value= li.innerHTML;
+        li.parentElement.remove();
     }
 }
 
