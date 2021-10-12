@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+        html{
+            font-size: 62.5%;
+            font-family: cursive;
+        }
+        .main-div{
+            width: 100vw;
+            height: 100vh;
+            background-color: #f6f6f6;
+            display: grid;
+            place-items: center;
+        }
+        .music-container{
+            width: 50rem;
+            /* height: 40rem; */
+            position: relative;
+            height: auto;
+            background-color: black;
+            border-radius: 1.5rem;
+            box-shadow: 0 2.2rem 3rem .5rem rgba(0,0,0,.8);
+            padding: 3rem;
+            text-align: center;
+            z-index: 1;
+        }
+        #title{
+            color: lightpink;
+            font-size: 4.2rem;
+        }
+
+        #artist{
+            font-size: 2.4rem;
+            color: lightgray;
+        }
+        img{
+            height: 12rem;
+            width: 12rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 3rem;
+            position: relative;
+        }
+
+        img::before{
+            content: '';
+            position: absolute;
+            background-color: lightpink;
+            width: 14rem;
+            height: 14rem;
+        }
+        .music-controls{
+            color: lightpink;
+            font-size: 3rem;
+            width: 20rem;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .main-button{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: lightpink;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+        .music-controls .fas:hover{
+            /* color: grey; */
+        }
+
+        .animation{
+            animation: rotatePlayer 3s linear infinite;
+        }
+
+        @keyframes rotatePlayer{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="music-container">
+            <h2 id="title">Magnificent Century</h2>
+            <h3 id="artist">Turkish</h3>
+            <div class="img-container">
+                <img src="images/taaha1.jpg" alt="">
+            </div>
+            <audio src="audios/taaha1.mp3"></audio>
+
+            <div class="music-controls">
+                <i class="fas fa-backward" id="prev" title="previous"></i>
+                <i class="fas fa-play main-button" id="play" title="play"></i>
+                <i class="fas fa-forward" id="next" title="next"></i>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
